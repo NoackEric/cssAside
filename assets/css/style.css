@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styling */
+
+.mediaOnly {
+    display: none;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fixPosition {
+    position: fixed;
+}
+
+body {
+    font-family: sans-serif;
+    background: #2e2e2e;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 10vh 0;
+}
+
+h1, h2 {
+    color: rgb(234, 204, 194);
+    font-weight: 300;
+    font-size: 36px;
+}
+
+p {
+    color: rgb(115, 115, 115);
+    line-height: 1.5em;
+    padding-top: 1em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Global styling END*/
+
+/* 'header start' */
+
+header {
+    width: 100%;
+    /* position: fixed; */
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    z-index: 1;
+    padding: 1vh 4vw 1vh 3vw;
+}
+
+nav {
+    width: 40%;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+/* nav ul {
+    display: flex;
+    justify-content: space-between;
+} */
+
+nav li {
+    padding-left: 2vw;
+}
+
+nav a {
+    color: #867772;
+    transition: color ease 1s;
+}
+
+nav a:hover {
+    color: #ebccc2;
+    text-decoration: underline;
+}
+
+/* 'header start end */
+
+/* aside start */
+
+aside {
+    /* position: fixed; */
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 1.5em;
+}
+
+aside a {
+    color: rgb(115, 115, 115);
+    transition: all 1s;
+}
+
+aside a:hover {
+    color: #fff;
+}
+
+aside ul {
+    padding-bottom: 5px;
+}
+
+aside li::before {
+    content: '\25E6';
+    font-size: 2em;
+    color: rgb(115, 115, 115);
+    position: relative;
+    top: 4.5px;
+    padding-right: 2.3em
+}
+
+.line {
+    border-left: 1px solid rgb(115, 115, 115);
+    height: 2.3em;
+    left: 4.8px;
+    position: relative;
+}
+
+.active {
+    color: #fff;
+    position: relative;
+    left: -26px;
+}
+
+.active::before {
+    content: '\25E6';
+    font-size: 75px;
+    color: #fff;
+    position: relative;
+    top: 18.5px;
+    right: 66.5px;
+}
+
+/* aside end */
+
+/* index start */
+
+.index h1 {
+    width: 22%;
+    margin: 10vh 45% 10vh 30%;
+}
+
+.imageLarge {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.imageLarge img {
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+/* .imageLarge {
+    width: 90%;
+    height: 110vh;
+    margin: 0 auto;
+    background: url('../img/section-about-1.jpg') no-repeat center;
+    margin-bottom: 10vh;
+} */
+
+.index2 {
+    width: 70%;
+    padding: 10vh 0 5vh;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+}
+
+.index2 img {
+    width: 32vmax;
+}
+
+.index2 div {
+    width: 32.5vmax;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* index end */
+
+/* largeImageText start */
+
+.largeImageText h1 {
+    font-size: 3em;
+}
+
+.largeImg {
+    /* display: flex; */
+    height: 100vh;
+    /* flex-wrap: wrap; */
+    align-items: unset;
+}
+
+.largeImg img {
+    width: 60%;
+    object-fit: fill;
+}
+
+.loungerMain {
+    padding: 0;
+}
+
+figcaption {
+    width: 40vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* dropdown */
+
+.dropbtn {
+    background-color: #867772;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    opacity: .5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #867772;
+}
+
+/* dropdown end */
+
+@media only screen and (max-width: 600px) {
+    .largeImg img {
+        width: 100%;
+    }
+    aside {
+        display: none;
+    }
+    .mediaOnly {
+        display: block;
+        flex-direction: column;
+    }
+    header a {
+        color: #fff;
+    }
+}
